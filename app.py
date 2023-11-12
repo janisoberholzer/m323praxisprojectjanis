@@ -11,8 +11,8 @@ autos = {
 
 # Basisroute
 @app.route('/')
-def hello_world():
-    return 'Willkommen zu meiner Auto Webseite!'
+def get_All():
+    return jsonify(autos)
 
 # Routen für Autoverwaltung
 @app.route('/auto/<string:auto_id>')
